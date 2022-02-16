@@ -1,52 +1,22 @@
-# Prerequisites
-*.d
+# ignore all .class files
+#*.class
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# exclude lib.class from "*.class", meaning all lib.class are still tracked
+# !lib.class
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# ignore all json files whose name begin with 'temp-'
+#temp-*.json
 
-# Precompiled Headers
-*.gch
-*.pch
+# only ignore the build.log file in current directory, not those in its subdirectories
+#/build.log
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# specify a folder with slash in the end
+# ignore all files in any directory named temp
+#temp/
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# ignore doc/notes.txt, but not doc/server/arch.txt
+#bin/*.txt
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# ignore all .pdf files in the doc/ directory and any of its subdirectories
+# /** matches 0 or more directories
+#doc/**/*.pdf
