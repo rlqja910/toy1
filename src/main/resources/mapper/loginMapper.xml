@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.toyapp.mapper.LoginMapper">
+ 
+    <!-- 카카오계정 확인 -->
+    <select id="selectKakaoUser" parameterType="String" resultType="KakaoUserInfoRes">
+        SELECT user_id
+        FROM kakao_user_bas
+    </select>
+    
+    <!-- 카카오계정 생성 -->
+    <select id="insertKakaoUser" parameterType="KakaoUserInfoReq">
+        INSERT INTO TOYADM.kakao_user_bas
+		VALUES (#{userId}, #{userNm} , #{emailAdr}, #{ipAdr}, #{profile}, current_timestamp, current_timestamp, current_timestamp)
+    </select>
+    
+    <!-- 카카오계정 업데이트 -->
+    <select id="updateKakaoUser" parameterType="KakaoUserInfoReq"> 
+        update TOYADM.kakao_user_bas
+        set user_nm = #{userNm},
+        	email_adr = #{emailAdr},
+        	ip_adr = #{ipAdr},
+        	profile = #{profile},
+        	last_login_dt = current_timestamp,
+			chg_dt = current_timestamp
+        where user_id = #{userId}
+    </select>
+</mapper>

@@ -1,0 +1,99 @@
+2022-02-22 14:08:12 [restartedMain] [ERROR] o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.PropertyAction - Could not find resource [logback-local.properties].
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:296)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.example.toyapp.ToyappApplication.main(ToyappApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.joran.action.PropertyAction - Could not find resource [logback-local.properties].
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:179)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:313)
+	... 23 common frames omitted
+2022-02-22 14:08:57 [restartedMain] [INFO ] com.example.toyapp.ToyappApplication - Starting ToyappApplication using Java 11.0.14 on DESKTOP-84C5L27 with PID 12232 (C:\app2\toyapp\target\classes started by rlqja910 in C:\app2\toyapp)
+2022-02-22 14:08:57 [restartedMain] [INFO ] com.example.toyapp.ToyappApplication - The following profiles are active: local
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$95798e92] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 248 ms
+2022-02-22 14:08:57 [restartedMain] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Starting...
+2022-02-22 14:08:57 [restartedMain] [WARN ] c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2022-02-22 14:08:57 [restartedMain] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Start completed.
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-22 14:08:57 [restartedMain] [INFO ] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-22 14:08:57 [restartedMain] [INFO ] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-22 14:08:57 [restartedMain] [WARN ] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-22 14:08:58 [restartedMain] [INFO ] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-02-22 14:08:58 [restartedMain] [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-22 14:08:58 [restartedMain] [INFO ] com.example.toyapp.ToyappApplication - Started ToyappApplication in 0.845 seconds (JVM running for 9577.926)
+2022-02-22 14:08:58 [restartedMain] [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2022-02-22 14:09:12 [Thread-98] [INFO ] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-22 14:09:12 [Thread-98] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Shutdown initiated...
+2022-02-22 14:09:12 [Thread-98] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Shutdown completed.
+2022-02-22 16:52:26 [HikariPool-20 housekeeper] [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-20 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2022-02-22 16:52:26 [HikariPool-20 housekeeper] [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-20 - Fill pool skipped, pool is at sufficient level.
+2022-02-22 16:52:27 [File Watcher] [DEBUG] o.s.boot.devtools.restart.Restarter - Restarting application
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.boot.devtools.restart.Restarter - Stopping application
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b2054dd, started on Tue Feb 22 16:51:26 KST 2022
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Bean 'webServerGracefulShutdown' completed its stop procedure
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483646
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Bean 'webServerStartStop' completed its stop procedure
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-22 16:52:27 [Thread-100] [INFO ] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.h.internal.SessionFactoryImpl - HHH000031: Closing
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.h.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@4abc1c4c] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@3840d81f]
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.h.s.i.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.h.b.r.i.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2022-02-22 16:52:27 [Thread-100] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Shutdown initiated...
+2022-02-22 16:52:27 [Thread-100] [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-20 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2022-02-22 16:52:27 [HikariPool-20 connection closer] [DEBUG] com.zaxxer.hikari.pool.PoolBase - HikariPool-20 - Closing connection oracle.jdbc.driver.T4CConnection@2bf05be6: (connection evicted)
+2022-02-22 16:52:27 [HikariPool-20 connection closer] [DEBUG] com.zaxxer.hikari.pool.PoolBase - HikariPool-20 - Closing connection oracle.jdbc.driver.T4CConnection@53b93ec4: (connection evicted)
+2022-02-22 16:52:27 [HikariPool-20 connection closer] [DEBUG] com.zaxxer.hikari.pool.PoolBase - HikariPool-20 - Closing connection oracle.jdbc.driver.T4CConnection@390993b7: (connection evicted)
+2022-02-22 16:52:27 [HikariPool-20 connection closer] [DEBUG] com.zaxxer.hikari.pool.PoolBase - HikariPool-20 - Closing connection oracle.jdbc.driver.T4CConnection@41bb3cb4: (connection evicted)
+2022-02-22 16:52:27 [HikariPool-20 connection closer] [DEBUG] com.zaxxer.hikari.pool.PoolBase - HikariPool-20 - Closing connection oracle.jdbc.driver.T4CConnection@74a6a79: (connection evicted)
+2022-02-22 16:52:27 [HikariPool-20 connection closer] [DEBUG] com.zaxxer.hikari.pool.PoolBase - HikariPool-20 - Closing connection oracle.jdbc.driver.T4CConnection@5abff30e: (connection evicted)
+2022-02-22 16:52:27 [HikariPool-20 connection closer] [DEBUG] com.zaxxer.hikari.pool.PoolBase - HikariPool-20 - Closing connection oracle.jdbc.driver.T4CConnection@2228e0a5: (connection evicted)
+2022-02-22 16:52:27 [HikariPool-20 connection closer] [DEBUG] com.zaxxer.hikari.pool.PoolBase - HikariPool-20 - Closing connection oracle.jdbc.driver.T4CConnection@c9316c7: (connection evicted)
+2022-02-22 16:52:27 [HikariPool-20 connection closer] [DEBUG] com.zaxxer.hikari.pool.PoolBase - HikariPool-20 - Closing connection oracle.jdbc.driver.T4CConnection@354ff5cf: (connection evicted)
+2022-02-22 16:52:27 [HikariPool-20 connection closer] [DEBUG] com.zaxxer.hikari.pool.PoolBase - HikariPool-20 - Closing connection oracle.jdbc.driver.T4CConnection@5f037a8: (connection evicted)
+2022-02-22 16:52:27 [Thread-100] [DEBUG] com.zaxxer.hikari.pool.HikariPool - HikariPool-20 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2022-02-22 16:52:27 [Thread-100] [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Shutdown completed.
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.boot.devtools.restart.Restarter - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@529537f8
+2022-02-22 16:52:27 [Thread-100] [DEBUG] o.s.boot.devtools.restart.Restarter - Starting application com.example.toyapp.ToyappApplication with URLs [file:/C:/app2/toyapp/target/classes/]
